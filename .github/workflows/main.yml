@@ -5,9 +5,13 @@ on:
     # Runs "At minute 20 past every hour from 7 through 23." (see https://crontab.guru)
     - cron: '*/20 7-23 * * *'
 jobs:
-  build:
+  request:
     name: Request whoogle-search instance
     runs-on: ubuntu-latest
     steps:
+      - name: Setup timezone
+        uses: zcong1993/setup-timezone@master
+        with:
+            timezone: Asia/Shanghai
       - name: cURL request
         run: curl https://whooglego.herokuapp.com/
