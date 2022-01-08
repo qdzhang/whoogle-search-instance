@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: cURL request
-        run: curl https://whooglego.herokuapp.com/
+        run: curl -L https://whooglego.herokuapp.com/
