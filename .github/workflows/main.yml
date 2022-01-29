@@ -2,8 +2,8 @@ name: Request-whoogle-search-instance
 
 on:
   schedule:
-    # Runs "At minute 20 past every hour from 7 through 23." (see https://crontab.guru)
-    - cron: '*/20 0-15,23 * * *'
+    # Runs "At minute 20 past every hour from 8 through 23." (see https://crontab.guru)
+    - cron: '*/20 1-15,23 * * *'
 jobs:
   request:
     name: Request whoogle-search instance
